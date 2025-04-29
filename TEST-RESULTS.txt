@@ -1,0 +1,24 @@
+
+# TEST-RESULTS
+
+## Black-box testiranje (Sistemsko testiranje / Testiranje prihvatljivosti)
+
+| Test izraza           | Očekivani rezultat | Rezultat kalkulatora | Status    | Napomena                                     |
+|------------------------|--------------------|-----------------------|-----------|----------------------------------------------|
+| 4+5                    | 9                  | 9                     | PASSED    | Osnovna operacija sabiranja radi ispravno    |
+| 10-2                   | 8                  | 8                     | PASSED    | Oduzimanje radi ispravno                     |
+| 5*3                    | 15                 | 15                    | PASSED    | Množenje radi ispravno                       |
+| 20/4                   | 5                  | 5                     | PASSED    | Deljenje radi ispravno                       |
+| 2+3*4                  | 14                 | 14                    | PASSED    | Poštovanje prioriteta operacija              |
+| (2+3)*4                | 20                 | 20                    | PASSED    | Ispravno rukovanje zagradama                 |
+| 10/0                   | Error ili poruka   | Exception / Crash     | FAILED    | Nema obrade deljenja sa nulom                |
+| abc+3                  | Error              | Exception / Crash     | FAILED    | Nema validacije neispravnog inputa           |
+| 5++2                   | Error              | Exception / Crash     | FAILED    | Nema validacije višestrukih operatora        |
+| 5+                    | Error              | Exception / Crash     | FAILED    | Nevalidan izraz ne baca poruku               |
+| -3+7                   | 4                  | 4                     | PASSED    | Negativni brojevi funkcionišu                |
+
+## Zaključci:
+- Osnovne aritmetičke operacije funkcionišu ispravno
+- Prioriteti operatora i zagrade su ispravno implementirani
+- Kalkulator **nema rukovanje greškama** (nevalidni izrazi, deljenje sa nulom izazivaju rušenje)
+- Preporučuje se dodavanje provere ulaznog izraza i try/catch blokova za stabilnost
