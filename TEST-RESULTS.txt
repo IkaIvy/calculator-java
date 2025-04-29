@@ -3,9 +3,9 @@
 
 ## Black-box testiranje (Sistemsko testiranje / Testiranje prihvatljivosti)
 
-| Test izraza           | Očekivani rezultat | Rezultat kalkulatora | Status    | Napomena                                     |
+| Test izraza            | Očekivani rezultat | Rezultat kalkulatora  | Status    | Napomena                                     |
 |------------------------|--------------------|-----------------------|-----------|----------------------------------------------|
-| 4+5                    | 9                  | 9                     | PASSED    | Osnovna operacija sabiranja radi ispravno    |
+| 4+5                    | 9                  | 9                     | PASSED    | Operacija sabiranja radi ispravno            |
 | 10-2                   | 8                  | 8                     | PASSED    | Oduzimanje radi ispravno                     |
 | 5*3                    | 15                 | 15                    | PASSED    | Množenje radi ispravno                       |
 | 20/4                   | 5                  | 5                     | PASSED    | Deljenje radi ispravno                       |
@@ -14,11 +14,11 @@
 | 10/0                   | Error ili poruka   | Exception / Crash     | FAILED    | Nema obrade deljenja sa nulom                |
 | abc+3                  | Error              | Exception / Crash     | FAILED    | Nema validacije neispravnog inputa           |
 | 5++2                   | Error              | Exception / Crash     | FAILED    | Nema validacije višestrukih operatora        |
-| 5+                    | Error              | Exception / Crash     | FAILED    | Nevalidan izraz ne baca poruku               |
+| 5+                     | Error              | Exception / Crash     | FAILED    | Nevalidan izraz ne baca poruku               |
 | -3+7                   | 4                  | 4                     | PASSED    | Negativni brojevi funkcionišu                |
 
 ## Zaključci:
-- Osnovne aritmetičke operacije funkcionišu ispravno
-- Prioriteti operatora i zagrade su ispravno implementirani
-- Kalkulator **nema rukovanje greškama** (nevalidni izrazi, deljenje sa nulom izazivaju rušenje)
-- Preporučuje se dodavanje provere ulaznog izraza i try/catch blokova za stabilnost
+- Osnovne aritmetičke operacije funkcionišu kako treba
+- Prioriteti operatora i zagrade su pravilno implementirani
+- Kalkulator **nema rukovanje greškama** (nevalidni izrazi, deljenje sa nulom izazivaju test fail)
+- Dodala bih provere ulaznog izraza i try/catch blokova za stabilnost
