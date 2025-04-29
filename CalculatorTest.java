@@ -1,4 +1,3 @@
-
 public class CalculatorTest {
 
     public static void main(String[] args) {
@@ -7,10 +6,10 @@ public class CalculatorTest {
 
     public static void testCalculate() {
         String expression = "4+5";
-        int expectedResult = 9;
-        int actualResult = Calculator.calculate(expression);
+        String expectedResult = "9.0";
+        String actualResult = Calculator.Run(expression);
 
-        if (expectedResult == actualResult) {
+        if (expectedResult.equals(actualResult)) {
             System.out.println("Test succeeded.");
         } else {
             System.out.println("Test failed for expression: " + expression);
